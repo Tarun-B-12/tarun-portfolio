@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tarun B &mdash; Data Engineer</title>
+<meta name="description" content="Data Engineer and Analytics Engineer with 6 years building ELT platforms, streaming systems, and AI-ready data products."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#060608;--surface:#0c0d12;--surface2:#111318;--line:rgba(255,255,255,0.07);--line2:rgba(255,255,255,0.13);--text:#f0f1f8;--muted:#7a8098;--faint:#3a3e52;--accent:#e8ff47;--accent2:#ff6b35;--accent3:#47d4ff;--display:'Bebas Neue',sans-serif;--mono:'JetBrains Mono',monospace;--body:'Instrument Sans',sans-serif;--max:1380px;--ease:cubic-bezier(0.16,1,0.3,1);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:0.028;pointer-events:none;z-index:9999;}
+.frame{width:min(100% - 3rem,var(--max));margin:0 auto;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid var(--line);backdrop-filter:blur(24px);background:rgba(6,6,8,0.72);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-brand{font-family:var(--display);font-size:1.5rem;letter-spacing:0.08em;color:var(--text);text-decoration:none;}
+.nav-brand span{color:var(--accent);}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 220ms;}
+.nav-links a:hover{color:var(--text);}
+.nav-cta{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;background:var(--accent);color:#060608;padding:0.55rem 1.1rem;text-decoration:none;font-weight:500;}
+.nav-cta:hover{opacity:0.85;}
+.ticker-wrap{position:absolute;top:88px;left:0;right:0;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:0.55rem 0;background:var(--surface);}
+.ticker-track{display:flex;animation:ticker 40s linear infinite;white-space:nowrap;}
+.ticker-item{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);padding:0 2.5rem;flex-shrink:0;}
+.ticker-item span{color:var(--accent);margin-right:0.5rem;}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.hero{min-height:100vh;display:grid;align-items:center;padding-top:80px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;pointer-events:none;}
+.hero-bg::before{content:'';position:absolute;top:-20%;right:-10%;width:70vw;height:70vw;background:radial-gradient(circle,rgba(232,255,71,0.055) 0%,transparent 60%);}
+.hero-bg::after{content:'';position:absolute;bottom:-10%;left:-5%;width:50vw;height:50vw;background:radial-gradient(circle,rgba(71,212,255,0.045) 0%,transparent 60%);}
+.hero-content{position:relative;z-index:1;padding:5rem 0 4rem;}
+.hero-eyebrow{font-family:var(--mono);font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;display:flex;align-items:center;gap:0.8rem;}
+.hero-eyebrow::before{content:'';display:block;width:2rem;height:1px;background:var(--accent);}
+.hero-name{font-family:var(--display);font-size:clamp(7rem,18vw,18rem);line-height:0.82;letter-spacing:-0.02em;text-transform:uppercase;margin-bottom:0.3rem;}
+.hero-name .ac{color:var(--accent);}
+.hero-role{font-family:var(--display);font-size:clamp(1.8rem,4vw,4.5rem);line-height:1;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);margin-bottom:2.5rem;}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.hero-bio{font-size:1.05rem;line-height:1.78;color:var(--muted);max-width:52ch;}
+.hero-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:2rem;}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line2);}
+.stat-cell{padding:1.25rem 1.4rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+.stat-cell:nth-child(even){border-right:none;}
+.stat-cell:nth-child(3),.stat-cell:nth-child(4){border-bottom:none;}
+.stat-num{font-family:var(--display);font-size:2.4rem;line-height:1;letter-spacing:-0.02em;color:var(--accent);}
+.stat-label{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:0.4rem;}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.8rem;font-family:var(--mono);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:all 220ms var(--ease);border:none;}
+.btn-primary{background:var(--accent);color:#060608;font-weight:500;}
+.btn-primary:hover{background:#fff;}
+.btn-outline{background:transparent;color:var(--text);border:1px solid var(--line2);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+.stack-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.2rem 0;background:var(--surface);overflow:hidden;}
+.stack-inner{display:flex;gap:2.5rem;flex-wrap:wrap;align-items:center;}
+.stack-item{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--faint);white-space:nowrap;transition:color 200ms;}
+.stack-item:hover{color:var(--muted);}
+section{padding:clamp(4rem,7vw,8rem) 0;}
+.section-label{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.8rem;}
+.section-label::before{content:'';display:block;width:2rem;height:1px;background:var(--accent);}
+.section-title{font-family:var(--display);font-size:clamp(3rem,6vw,7rem);line-height:0.9;letter-spacing:-0.01em;text-transform:uppercase;margin-bottom:3rem;}
+.section-title em{font-style:normal;color:var(--muted);}
+.projects-list{display:flex;flex-direction:column;gap:0;}
+.project-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line);transition:background 300ms;}
+.project-row:last-child{border-bottom:1px solid var(--line);}
+.project-row:hover{background:var(--surface);}
+.project-left{padding:2.5rem 2rem 2.5rem 0;border-right:1px solid var(--line);}
+.project-right{padding:2.5rem 0 2.5rem 2rem;}
+.proj-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.8rem;gap:1rem;}
+.project-num{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);}
+.proj-links{display:flex;gap:0.5rem;flex-shrink:0;}
+.proj-link{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.7rem;border:1px solid var(--line2);color:var(--muted);text-decoration:none;transition:all 180ms;white-space:nowrap;}
+.proj-link:hover{border-color:var(--accent);color:var(--accent);}
+.proj-link.live{border-color:rgba(232,255,71,0.35);color:var(--accent);}
+.proj-link.live:hover{background:rgba(232,255,71,0.08);}
+.project-title{font-family:var(--display);font-size:clamp(1.8rem,2.8vw,3rem);line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;margin-bottom:0.9rem;}
+.project-summary{font-size:0.95rem;line-height:1.72;color:var(--muted);margin-bottom:1.5rem;max-width:52ch;}
+.project-tag-row{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.5rem;}
+.tag{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.38rem 0.7rem;border:1px solid var(--line2);color:var(--muted);}
+.project-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);}
+.metric{padding:1rem 1.1rem;border-right:1px solid var(--line);}
+.metric:last-child{border-right:none;}
+.metric-val{font-family:var(--display);font-size:1.9rem;line-height:1;letter-spacing:-0.02em;}
+.metric-val.a1{color:var(--accent);}
+.metric-val.a2{color:var(--accent2);}
+.metric-val.a3{color:var(--accent3);}
+.metric-label{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:0.3rem;}
+.project-arch{display:flex;flex-direction:column;height:100%;}
+.arch-diagram{background:var(--surface2);border:1px solid var(--line);padding:1.5rem;flex:1;margin-bottom:1.25rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;gap:0.65rem;}
+.arch-label{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--faint);margin-bottom:0.5rem;}
+.arch-row{display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;}
+.arch-node{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.06em;padding:0.3rem 0.65rem;border:1px solid;white-space:nowrap;}
+.an-src{border-color:var(--faint);color:var(--muted);}
+.an-proc{border-color:rgba(232,255,71,0.3);color:var(--accent);}
+.an-store{border-color:rgba(71,212,255,0.3);color:var(--accent3);}
+.an-serve{border-color:rgba(255,107,53,0.3);color:var(--accent2);}
+.arch-arrow{font-family:var(--mono);font-size:0.6rem;color:var(--faint);}
+.project-outcome{padding:1.1rem;border:1px solid rgba(232,255,71,0.15);background:rgba(232,255,71,0.03);}
+.outcome-label{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.45rem;}
+.outcome-text{font-size:0.88rem;line-height:1.68;color:var(--muted);}
+.exp-list{display:flex;flex-direction:column;gap:0;}
+.exp-row{display:grid;grid-template-columns:260px 1fr;gap:0;border-top:1px solid var(--line);padding:2rem 0;}
+.exp-row:last-child{border-bottom:1px solid var(--line);}
+.exp-left{padding-right:2rem;}
+.exp-dot{display:inline-block;width:8px;height:8px;background:var(--accent);margin-bottom:0.6rem;}
+.exp-co{font-family:var(--display);font-size:1.5rem;letter-spacing:0.02em;text-transform:uppercase;margin-bottom:0.3rem;}
+.exp-role{font-size:0.85rem;color:var(--muted);margin-bottom:0.4rem;}
+.exp-date{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--faint);}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:0.55rem;}
+.exp-bullets li{font-size:0.9rem;line-height:1.7;color:var(--muted);padding-left:1rem;position:relative;}
+.exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:0.75rem;}
+.exp-bullets li strong{color:var(--text);font-weight:600;}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border:1px solid var(--line);}
+.skill-group{padding:1.8rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+.skill-group-title{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+.skill-tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.skill-tag{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.06em;padding:0.28rem 0.6rem;border:1px solid var(--line2);color:var(--muted);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);}
+.contact-left{padding:3rem;border-right:1px solid var(--line);}
+.contact-tagline{font-family:var(--display);font-size:clamp(2rem,4vw,4.5rem);line-height:0.92;letter-spacing:-0.01em;text-transform:uppercase;margin-bottom:1.5rem;}
+.contact-tagline em{font-style:normal;color:var(--accent);}
+.contact-copy{font-size:0.95rem;line-height:1.78;color:var(--muted);max-width:46ch;margin-bottom:2rem;}
+.contact-right{padding:3rem;display:flex;flex-direction:column;justify-content:space-between;}
+.contact-links{display:flex;flex-direction:column;gap:0;}
+.contact-link{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 0;border-bottom:1px solid var(--line);text-decoration:none;transition:all 200ms;}
+.contact-link:first-child{border-top:1px solid var(--line);}
+.contact-link:hover .cl-arrow{color:var(--accent);transform:translateX(4px);}
+.cl-label{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);}
+.cl-val{font-size:0.9rem;color:var(--text);}
+.cl-arrow{font-family:var(--mono);font-size:0.9rem;color:var(--faint);transition:all 200ms;}
+footer{border-top:1px solid var(--line);padding:2rem 0;}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;}
+.footer-copy{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--faint);}
+[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity 600ms var(--ease),transform 600ms var(--ease);}
+[data-reveal].visible{opacity:1;transform:none;}
+@media(max-width:900px){
+  .hero-grid,.project-row,.contact-grid{grid-template-columns:1fr;}
+  .project-left{border-right:none;border-bottom:1px solid var(--line);padding:2rem 0;}
+  .project-right{padding:2rem 0;}
+  .exp-row{grid-template-columns:1fr;gap:1rem;}
+  .contact-left{border-right:none;border-bottom:1px solid var(--line);padding:2rem;}
+  .contact-right{padding:2rem;}
+  .nav-links{display:none;}
+  .project-metrics{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="frame nav-inner">
+    <a href="#" class="nav-brand">TARUN <span>B</span></a>
+    <ul class="nav-links">
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Stack</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:buildwithtarun@gmail.com" class="nav-cta">Let's talk &#8594;</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item"><span>&#8594;</span> $566K revenue leakage identified across 9,994 transactions</span>
+      <span class="ticker-item"><span>&#8594;</span> RAG pipeline on AWS EC2 + S3 &#183; SEC 10-K filings &#183; live demo</span>
+      <span class="ticker-item"><span>&#8594;</span> dbt Core &#183; star schema &#183; 100K+ row ecommerce KPI mart</span>
+      <span class="ticker-item"><span>&#8594;</span> Confluent Cloud Kafka &#183; real-time retail streaming dashboard</span>
+      <span class="ticker-item"><span>&#8594;</span> LLM classifier &#183; Claude API &#183; 91.2% accuracy vs rule baseline</span>
+      <span class="ticker-item"><span>&#8594;</span> Great Expectations &#183; retail data quality observability</span>
+      <span class="ticker-item"><span>&#8594;</span> 2B+ daily transactions &#183; 55% latency cut &#183; Fifth Third Bank</span>
+      <span class="ticker-item"><span>&#8594;</span> $566K revenue leakage identified across 9,994 transactions</span>
+      <span class="ticker-item"><span>&#8594;</span> RAG pipeline on AWS EC2 + S3 &#183; SEC 10-K filings &#183; live demo</span>
+      <span class="ticker-item"><span>&#8594;</span> dbt Core &#183; star schema &#183; 100K+ row ecommerce KPI mart</span>
+      <span class="ticker-item"><span>&#8594;</span> Confluent Cloud Kafka &#183; real-time retail streaming dashboard</span>
+      <span class="ticker-item"><span>&#8594;</span> LLM classifier &#183; Claude API &#183; 91.2% accuracy vs rule baseline</span>
+      <span class="ticker-item"><span>&#8594;</span> Great Expectations &#183; retail data quality observability</span>
+      <span class="ticker-item"><span>&#8594;</span> 2B+ daily transactions &#183; 55% latency cut &#183; Fifth Third Bank</span>
+    </div>
+  </div>
+  <div class="frame hero-content">
+    <div class="hero-eyebrow">Data Engineer &#183; Analytics Engineer &#183; Dallas TX</div>
+    <h1 class="hero-name">TAR<span class="ac">U</span>N B</h1>
+    <p class="hero-role">Cloud &#183; Streaming &#183; Analytics</p>
+    <div class="hero-grid" data-reveal>
+      <div>
+        <p class="hero-bio">6 years building ELT platforms, real-time streaming systems, AI-assisted data pipelines, and cloud data infrastructure across banking, retail, insurance, and HR tech. I work where platform reliability, pipeline performance, and business-ready analytics meet.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View portfolio</a>
+          <a href="https://github.com/Tarun-B-12" target="_blank" rel="noopener" class="btn btn-outline">GitHub &#8594;</a>
+          <a href="https://linkedin.com/in/tarun-b-k" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn &#8594;</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-cell"><div class="stat-num">6</div><div class="stat-label">Years experience</div></div>
+        <div class="stat-cell"><div class="stat-num">2B+</div><div class="stat-label">Daily transactions</div></div>
+        <div class="stat-cell"><div class="stat-num">6</div><div class="stat-label">Portfolio projects</div></div>
+        <div class="stat-cell"><div class="stat-num">$566K</div><div class="stat-label">Leakage found</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stack-strip">
+  <div class="frame stack-inner">
+    <span class="stack-item">AWS EC2 &#38; S3</span><span class="stack-item">Kafka &#38; Confluent Cloud</span>
+    <span class="stack-item">dbt Core</span><span class="stack-item">DuckDB</span><span class="stack-item">Python</span>
+    <span class="stack-item">Snowflake</span><span class="stack-item">Great Expectations</span>
+    <span class="stack-item">Claude API</span><span class="stack-item">Streamlit</span>
+    <span class="stack-item">Apache Spark</span><span class="stack-item">Tableau</span>
+    <span class="stack-item">Terraform</span><span class="stack-item">Docker &#38; Kubernetes</span><span class="stack-item">Power BI</span>
+  </div>
+</div>
+
+<section id="projects">
+  <div class="frame">
+    <div data-reveal>
+      <div class="section-label">Portfolio projects</div>
+      <h2 class="section-title">Built in public.<br><em>Every number is real.</em></h2>
+    </div>
+    <div class="projects-list">
+
+      <div class="project-row" data-reveal>
+        <div class="project-left">
+          <div class="proj-top">
+            <div class="project-num">01 / Finance &#183; Analytics</div>
+            <div class="proj-links">
+              <a href="https://github.com/Tarun-B-12/revenue-margin-analysis" target="_blank" rel="noopener" class="proj-link">GitHub &#8594;</a>
+            </div>
+          </div>
+          <h3 class="project-title">Revenue Leakage and Margin Analysis</h3>
+          <p class="project-summary">Finance and ops teams were reporting different margin numbers from the same dataset. Discount policies applied inconsistently. High-discount transactions buried in aggregate reports. Built an end-to-end pipeline to find exactly where $566K was disappearing and surface it in a Streamlit dashboard with KPI drill-down.</p>
+          <div class="project-tag-row">
+            <span class="tag">Python</span><span class="tag">DuckDB</span><span class="tag">SQL</span>
+            <span class="tag">Tableau</span><span class="tag">Streamlit</span><span class="tag">Pandas</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric"><div class="metric-val a1">$566K</div><div class="metric-label">Revenue leakage found</div></div>
+            <div class="metric"><div class="metric-val a3">9,994</div><div class="metric-label">Transactions analyzed</div></div>
+            <div class="metric"><div class="metric-val a2">8</div><div class="metric-label">Business SQL queries</div></div>
+          </div>
+        </div>
+        <div class="project-right">
+          <div class="project-arch">
+            <div class="arch-diagram">
+              <div class="arch-label">Pipeline architecture</div>
+              <div class="arch-row"><span class="arch-node an-src">Superstore dataset</span><span class="arch-arrow">&#8594;</span><span class="arch-node an-proc">Python feature engineering</span></div>
+              <div class="arch-row" style="padding-left:1.5rem;"><span class="arch-arrow">&#8595;</span></div>
+              <div class="arch-row"><span class="arch-node an-proc">DuckDB &#183; 8 SQL queries</span><span class="arch-arrow">&#8594;</span><span class="arch-node an-store">Margin + discount tiers</span></div>
+              <div class="arch-row" style="padding-left:1.5rem;"><span class="arch-arrow">&#8595;</span></div>
+              <div class="arch-row"><span class="arch-node an-serve">Streamlit dashboard &#183; Tableau</span></div>
+            </div>
+            <div class="project-outcome">
+              <div class="outcome-label">What it found</div>
+              <div class="outcome-text">$566K in leakage traced to discount tiers above 20% concentrated in Office Supplies and Furniture. The pipeline catches it before quarterly review, not after.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row" data-reveal>
+        <div class="project-left">
+          <div class="proj-top">
+            <div class="project-num">02 / AI &#183; AWS &#183; Finance</div>
+            <div class="proj-links">
+              <a href="http://3.238.34.92:8501" target="_blank" rel="noopener" class="proj-link live">Live demo &#8594;</a>
+              <a href="https://github.com/Tarun-B-12/financial-doc-rag-aws" target="_blank" rel="noopener" class="proj-link">GitHub &#8594;</a>
+            </div>
+          </div>
+          <h3 class="project-title">Financial Document RAG Pipeline</h3>
+          <p class="project-summary">Production RAG pipeline on AWS EC2 and S3 answering natural language questions against SEC 10-K filings with source citations and hallucination detection. Deployed with a live demo. Built for financial analysts who need to query large document sets without reading every page.</p>
+          <div class="project-tag-row">
+            <span class="tag">AWS EC2</span><span class="tag">AWS S3</span><span class="tag">Python</span>
+            <span class="tag">RAG</span><span class="tag">Vector DB</span><span class="tag">LLM</span><span class="tag">Streamlit</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric"><div class="metric-val a1">SEC</div><div class="metric-label">10-K filings indexed</div></div>
+            <div class="metric"><div class="metric-val a3">AWS</div><div class="metric-label">EC2 + S3 deployed</div></div>
+            <div class="metric"><div class="metric-val a2">Live</div><div class="metric-label">Demo available</div></div>
+          </div>
+        </div>
+        <div class="project-right">
+          <div class="project-arch">
+            <div class="arch-diagram">
+              <div class="arch-label">System architecture</div>
+              <div class="arch-row"><span class="arch-node an-src">SEC 10-K PDFs</span><span class="arch-arrow">&#8594;</span><span class="arch-node an-proc">Chunking + embeddings</span></div>
+              <div class="arch-row" style="padding-left:1.5rem;"><span class="arch-arrow">&#8595;</span></div>
+              <div class="arch-row"><span class="arch-node an-store">Vector DB on AWS S3</span><span class="arch-arrow">&#8594;</span><span class="arch-node an-proc">Retrieval + LLM</span></div>
+              <div class="arch-row" style="padding-left:1.5rem;"><span class="arch-arrow">&#8595;</span></div>
+              <div class="arch-row"><span class="arch-node an-serve">Cited answers + hallucination guard</span></div>
+            </div>
+            <div class="project-outcome">
+              <div class="outcome-label">What makes it production-grade</div>
+              <div class="outcome-text">Source citations on every answer. Hallucination detection before output surfaces. Deployed on AWS EC2, not just a local notebook. Live demo linked in the repo.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row" data-reveal>
+        <div class="project-left">
+          <div class="proj-top">
+            <div class="project-num">03 / AI &#183; LLM &#183; Evaluation</div>
+            <div class="proj-links">
+              <a href="https://github.com/Tarun-B-12/transaction-classifier-ai" target="_blank" rel="noopener" class="proj-link">GitHub &#8594;</a>
+            </div>
+          </div>
+          <h3 class="project-title">LLM Transaction Classifier</h3>
+          <p class="project-summary">LLM-powered transaction classification system with a structured evaluation framework benchmarking Claude API against a rule-based baseline. Includes confidence scoring, cost tracking per classification, and a full eval harness that measures exactly when the LLM wins and when rules win.</p>
+          <div class="project-tag-row">
+            <span class="tag">Claude API</span><span class="tag">Python</span>
+            <span class="tag">LLM evaluation</span><span class="tag">Confidence scoring</span><span class="tag">Cost tracking</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric"><div class="metric-val a1">91.2%</div><div class="metric-label">LLM accuracy</div></div>
+            <div class="metric"><div class="metric-val a3">vs</div><div class="metric-label">Rule-based baseline</div></div>
+            <div class="metric"><div class="metric-val a2">Cost</div><div class="metric-label">Tracked per call</div></div>
+          </div>
+        </div>
+        <div class="project-right">
+          <div class="project-arch">
+            <div class="arch-diagram">
+              <div class="arch-label">Evaluation framework</div>
+              <div class="arch-row"><span class="arch-node an-src">Raw transactions</span><span class="arch-arrow">&#8594;</span><span class="arch-node an-proc">Rule-based classifier</span></div>
+              <div class="arch-row"><span class="arch-node an-src">Raw transactions</span><span class="arch-arrow">&#8594;</span><span class="arch-node an-proc">Claude API classifier</span></div>
+              <div class="arch-row" style="padding-left:1.5rem;"><span class="arch-arrow">&#8595;</span></div>
+              <div class="arch-row"><span class="arch-node an-store">Eval harness &#183; confidence + cost</span><span class="arch-arrow">&#8594;</span><span class="arch-node an-serve">Benchmark report</span></div>
+            </div>
+            <div class="project-outcome">
+              <div class="outcome-label">Why this stands out</div>
+              <div class="outcome-text">Most LLM projects skip evaluation entirely. This one measures accuracy, confidence, and cost per call so you can defend when the LLM is worth it versus a cheaper rule-based system.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row" data-reveal>
+        <div class="project-left">
+          <div class="proj-top">
+            <div class="project-num">04 / Analytics Engineering &#183; dbt</div>
+            <div class="proj-links">
+              <a href="https://github.com/Tarun-B-12/ecommerce-kpi-mart" target="_blank" rel="noopener" class="proj-link">GitHub &#8594;</a>
+            </div>
+          </div>
+          <h3 class="project-title">Ecommerce KPI Mart</h3>
+          <p class="project-summary">Analytics engineering pipeline with dbt Core, star schema dimensional modeling, and a production-ready KPI mart on a 100K+ row ecommerce dataset using DuckDB. Includes dbt tests, schema validation, and full docs so the models are trustable, not just runnable.</p>
+          <div class="project-tag-row">
+            <span class="tag">dbt Core</span><span class="tag">DuckDB</span><span class="tag">Star schema</span>
+            <span class="tag">SCD Type 2</span><span class="tag">dbt tests</span><span class="tag">SQL</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric"><div class="metric-val a1">100K+</div><div class="metric-label">Rows modeled</div></div>
+            <div class="metric"><div class="metric-val a3">Star</div><div class="metric-label">Schema + SCD2</div></div>
+            <div class="metric"><div class="metric-val a2">Full</div><div class="metric-label">dbt tests + docs</div></div>
+          </div>
+        </div>
+        <div class="project-right">
+          <div class="project-arch">
+            <div class="arch-diagram">
+              <div class="arch-label">dbt layer architecture</div>
+              <div class="arch-row"><span class="arch-node an-src">Raw ecommerce CSV</span><span class="arch-arrow">&#8594;</span><span class="arch-node an-proc">dbt staging models</span></div>
+              <div class="arch-row" style="padding-left:1.5rem;"><span class="arch-arrow">&#8595;</span></div>
+              <div class="arch-row"><span class="arch-node an-proc">dbt intermediate models</span><span class="arch-arrow">&#8594;</span><span class="arch-node an-store">Fact + dim tables (DuckDB)</span></div>
+              <div class="arch-row" style="padding-left:1.5rem;"><span class="arch-arrow">&#8595;</span></div>
+              <div class="arch-row"><span class="arch-node an-serve">KPI mart &#183; dbt docs &#183; test coverage</span></div>
+            </div>
+            <div class="project-outcome">
+              <div class="outcome-label">What analytics engineering looks like</div>
+              <div class="outcome-text">Staging, intermediate, and mart layers following dbt best practices. Schema tests on every key column. Auto-generated docs. This is the pattern used in production analytics engineering at scale.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row" data-reveal>
+        <div class="project-left">
+          <div class="proj-top">
+            <div class="project-num">05 / Streaming &#183; Real-Time</div>
+            <div class="proj-links">
+              <a href="https://github.com/Tarun-B-12/retailstream-kafka-pipeline" target="_blank" rel="noopener" class="proj-link">GitHub &#8594;</a>
+            </div>
+          </div>
+          <h3 class="project-title">RetailStream Kafka Pipeline</h3>
+          <p class="project-summary">Real-time retail event streaming pipeline with Confluent Cloud Kafka, Python consumer, DuckDB aggregation, and a live Streamlit dashboard showing revenue and transaction KPIs updating in real time. Full stack from event producer to live dashboard.</p>
+          <div class="project-tag-row">
+            <span class="tag">Kafka</span><span class="tag">Confluent Cloud</span><span class="tag">Python</span>
+            <span class="tag">DuckDB</span><span class="tag">Streamlit</span><span class="tag">Real-time</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric"><div class="metric-val a1">Live</div><div class="metric-label">KPI dashboard</div></div>
+            <div class="metric"><div class="metric-val a3">Kafka</div><div class="metric-label">Confluent Cloud</div></div>
+            <div class="metric"><div class="metric-val a2">Full</div><div class="metric-label">Producer to UI</div></div>
+          </div>
+        </div>
+        <div class="project-right">
+          <div class="project-arch">
+            <div class="arch-diagram">
+              <div class="arch-label">Streaming architecture</div>
+              <div class="arch-row"><span class="arch-node an-src">Retail event producer</span><span class="arch-arrow">&#8594;</span><span class="arch-node an-proc">Confluent Cloud Kafka</span></div>
+              <div class="arch-row" style="padding-left:1.5rem;"><span class="arch-arrow">&#8595;</span></div>
+              <div class="arch-row"><span class="arch-node an-proc">Python consumer</span><span class="arch-arrow">&#8594;</span><span class="arch-node an-store">DuckDB aggregations</span></div>
+              <div class="arch-row" style="padding-left:1.5rem;"><span class="arch-arrow">&#8595;</span></div>
+              <div class="arch-row"><span class="arch-node an-serve">Streamlit live KPI dashboard</span></div>
+            </div>
+            <div class="project-outcome">
+              <div class="outcome-label">Why streaming matters here</div>
+              <div class="outcome-text">Most portfolio projects batch-process data. This shows the full real-time path: event production, Kafka topic, Python consumer, DuckDB aggregation, and a dashboard that updates as events arrive.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row" data-reveal>
+        <div class="project-left">
+          <div class="proj-top">
+            <div class="project-num">06 / Data Quality &#183; Observability</div>
+            <div class="proj-links">
+              <a href="https://github.com/Tarun-B-12/retail-data-quality-observability" target="_blank" rel="noopener" class="proj-link">GitHub &#8594;</a>
+            </div>
+          </div>
+          <h3 class="project-title">Retail Data Quality and Observability</h3>
+          <p class="project-summary">Data quality and observability framework for a retail pipeline using Great Expectations. Validates data at ingestion before it reaches the analytics layer, surfaces anomalies in a monitoring view, and documents what good data looks like for every critical column.</p>
+          <div class="project-tag-row">
+            <span class="tag">Great Expectations</span><span class="tag">Python</span><span class="tag">SQL</span>
+            <span class="tag">Data contracts</span><span class="tag">Observability</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric"><div class="metric-val a1">Pre</div><div class="metric-label">Delivery validation</div></div>
+            <div class="metric"><div class="metric-val a3">GX</div><div class="metric-label">Great Expectations</div></div>
+            <div class="metric"><div class="metric-val a2">Full</div><div class="metric-label">Anomaly monitoring</div></div>
+          </div>
+        </div>
+        <div class="project-right">
+          <div class="project-arch">
+            <div class="arch-diagram">
+              <div class="arch-label">Quality framework</div>
+              <div class="arch-row"><span class="arch-node an-src">Raw retail data</span><span class="arch-arrow">&#8594;</span><span class="arch-node an-proc">Great Expectations suite</span></div>
+              <div class="arch-row" style="padding-left:1.5rem;"><span class="arch-arrow">&#8595;</span></div>
+              <div class="arch-row"><span class="arch-node an-store">Validation results &#183; anomaly log</span></div>
+              <div class="arch-row" style="padding-left:1.5rem;"><span class="arch-arrow">&#8595;</span></div>
+              <div class="arch-row"><span class="arch-node an-serve">Monitoring view &#183; data docs</span></div>
+            </div>
+            <div class="project-outcome">
+              <div class="outcome-label">The real problem this solves</div>
+              <div class="outcome-text">Bad data reaching the analytics layer costs 10x more to fix than bad data caught at ingestion. This validates before delivery, not after analysts report the discrepancy at the end of the month.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="background:var(--surface);">
+  <div class="frame">
+    <div data-reveal>
+      <div class="section-label">Experience</div>
+      <h2 class="section-title">Where the<br><em>work happened.</em></h2>
+    </div>
+    <div class="exp-list">
+      <div class="exp-row" data-reveal>
+        <div class="exp-left">
+          <div class="exp-dot"></div>
+          <div class="exp-co">Fifth Third Bank</div>
+          <div class="exp-role">Data Engineer</div>
+          <div class="exp-date">Feb 2025 &#8211; Present &#183; Columbus OH</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>ELT platform on <strong>AWS Glue + Spark</strong> consolidating 14 banking systems into Snowflake, processing <strong>2B+ daily transactions</strong> with 55% latency reduction</li>
+          <li><strong>dbt layer with 300+ models</strong>, data contracts, and schema tests achieving <strong>99.8% data quality SLA</strong> across 6 domains</li>
+          <li>Real-time <strong>Kafka pipeline at 1.2M events/min</strong> contributing to <strong>28% fraud loss reduction</strong> in two quarters</li>
+          <li>Containerized ETL on <strong>AWS EKS + Terraform</strong> saving <strong>$180K annually</strong> at 99.95% uptime</li>
+          <li>Data governance with column-level lineage and PII classification &#8212; <strong>2 audits with zero findings</strong></li>
+          <li>Query optimization cutting runtime from <strong>4.5 min to 18 seconds</strong>, 34% compute credit reduction</li>
+        </ul>
+      </div>
+      <div class="exp-row" data-reveal>
+        <div class="exp-left">
+          <div class="exp-dot" style="background:var(--accent3);"></div>
+          <div class="exp-co">Paycom</div>
+          <div class="exp-role">Data Engineer</div>
+          <div class="exp-date">May 2024 &#8211; Aug 2024 &#183; Dallas TX</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Migrated <strong>40+ SSIS pipelines to Azure Data Factory</strong>, cutting batch time 62% for <strong>6M+ employee records</strong></li>
+          <li>Snowflake dimensional warehouse with SCD Type 2 enabling cross-domain analytics unavailable in prior siloed architecture</li>
+          <li><strong>400+ Great Expectations rules</strong> intercepting 1,200+ anomalies, preventing <strong>$500K in payroll correction costs</strong></li>
+          <li>Power BI semantic layer with 60+ DAX measures reducing BI ticket backlog <strong>60% in 6 weeks</strong></li>
+        </ul>
+      </div>
+      <div class="exp-row" data-reveal>
+        <div class="exp-left">
+          <div class="exp-dot" style="background:var(--accent2);"></div>
+          <div class="exp-co">The Home Depot</div>
+          <div class="exp-role">Big Data Engineer</div>
+          <div class="exp-date">Mar 2020 &#8211; Dec 2022 &#183; Atlanta GA</div>
+        </div>
+        <ul class="exp-bullets">
+          <li><strong>Hadoop + Hive ELT on AWS EMR</strong> for 10M+ daily transactions from 2,300+ stores &#8212; runtime from <strong>6 hours to 45 minutes</strong></li>
+          <li>PySpark pipelines serving <strong>80+ analysts</strong> across merchandising, supply chain, pricing, and store ops</li>
+          <li>Cloud migration decommissioning 6 on-prem servers, saving <strong>$320K annually</strong></li>
+          <li>A/B testing infrastructure for 12 pricing experiments, adopted by the Pricing team company-wide</li>
+        </ul>
+      </div>
+      <div class="exp-row" data-reveal>
+        <div class="exp-left">
+          <div class="exp-dot" style="background:var(--faint);"></div>
+          <div class="exp-co">MetLife</div>
+          <div class="exp-role">ETL Developer</div>
+          <div class="exp-date">Aug 2018 &#8211; Feb 2020 &#183; New York NY</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>30+ SSIS ETL packages across 8 source systems enabling cross-product analytics for Life, Disability, and Group Benefits</li>
+          <li>150+ T-SQL stored procedures cutting reconciliation by <strong>120 hours per month</strong></li>
+          <li>Logistic regression churn model (AUC 0.83) improving 12-month retention by <strong>7%</strong> across 200K+ policyholders</li>
+          <li>Regulatory submissions automated from <strong>5 days to 4 hours</strong>, eliminating 3 annual missed deadlines</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="frame">
+    <div data-reveal>
+      <div class="section-label">Technical stack</div>
+      <h2 class="section-title">Tools that<br><em>ship systems.</em></h2>
+    </div>
+    <div class="skills-grid" data-reveal>
+      <div class="skill-group"><div class="skill-group-title">Languages</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">PySpark</span><span class="skill-tag">SQL</span><span class="skill-tag">T-SQL</span><span class="skill-tag">Snowflake SQL</span><span class="skill-tag">Scala</span><span class="skill-tag">DAX</span><span class="skill-tag">Bash</span></div></div>
+      <div class="skill-group"><div class="skill-group-title">Data Engineering</div><div class="skill-tags"><span class="skill-tag">Apache Spark</span><span class="skill-tag">Kafka</span><span class="skill-tag">Airflow</span><span class="skill-tag">dbt Core</span><span class="skill-tag">AWS Glue</span><span class="skill-tag">Azure Data Factory</span><span class="skill-tag">Databricks</span><span class="skill-tag">Delta Lake</span><span class="skill-tag">Fivetran</span></div></div>
+      <div class="skill-group"><div class="skill-group-title">Cloud Platforms</div><div class="skill-tags"><span class="skill-tag">AWS (Glue, S3, Redshift, EMR, EKS)</span><span class="skill-tag">Azure (ADF, Synapse, ADLS)</span><span class="skill-tag">GCP (BigQuery, Dataflow)</span><span class="skill-tag">Snowflake</span></div></div>
+      <div class="skill-group"><div class="skill-group-title">Quality + Governance</div><div class="skill-tags"><span class="skill-tag">Great Expectations</span><span class="skill-tag">Data contracts</span><span class="skill-tag">Data lineage</span><span class="skill-tag">PII classification</span><span class="skill-tag">SOX</span><span class="skill-tag">HIPAA</span><span class="skill-tag">CCAR</span><span class="skill-tag">GLBA</span></div></div>
+      <div class="skill-group"><div class="skill-group-title">DevOps + Infra</div><div class="skill-tags"><span class="skill-tag">Docker</span><span class="skill-tag">Kubernetes</span><span class="skill-tag">Terraform</span><span class="skill-tag">GitHub Actions</span><span class="skill-tag">CI/CD</span><span class="skill-tag">Linux</span></div></div>
+      <div class="skill-group"><div class="skill-group-title">BI + AI</div><div class="skill-tags"><span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span><span class="skill-tag">Looker</span><span class="skill-tag">RAG pipelines</span><span class="skill-tag">LLM integration</span><span class="skill-tag">Vector databases</span><span class="skill-tag">Claude API</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--surface);">
+  <div class="frame">
+    <div class="section-label" data-reveal>Contact</div>
+    <div class="contact-grid" data-reveal>
+      <div class="contact-left">
+        <h2 class="contact-tagline">Building<br>something<br><em>serious?</em></h2>
+        <p class="contact-copy">Open to senior data engineering and analytics engineering roles where the work involves real scale, real data problems, and real business impact. Based in Dallas TX. Open to hybrid and remote.</p>
+        <a href="mailto:buildwithtarun@gmail.com" class="btn btn-primary" style="display:inline-flex;">Send a message &#8594;</a>
+      </div>
+      <div class="contact-right">
+        <div class="contact-links">
+          <a href="mailto:buildwithtarun@gmail.com" class="contact-link"><div><div class="cl-label">Email</div><div class="cl-val">buildwithtarun@gmail.com</div></div><span class="cl-arrow">&#8594;</span></a>
+          <a href="https://linkedin.com/in/tarun-b-k" target="_blank" rel="noopener" class="contact-link"><div><div class="cl-label">LinkedIn</div><div class="cl-val">linkedin.com/in/tarun-b-k</div></div><span class="cl-arrow">&#8594;</span></a>
+          <a href="https://github.com/Tarun-B-12" target="_blank" rel="noopener" class="contact-link"><div><div class="cl-label">GitHub</div><div class="cl-val">github.com/Tarun-B-12</div></div><span class="cl-arrow">&#8594;</span></a>
+          <a href="tel:+14698448249" class="contact-link"><div><div class="cl-label">Phone</div><div class="cl-val">+1 469 844 8249</div></div><span class="cl-arrow">&#8594;</span></a>
+        </div>
+        <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line);">
+          <div style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--faint);margin-bottom:0.5rem;">Education</div>
+          <div style="font-size:0.9rem;color:var(--muted);">MS Data Engineering &#8212; University of North Texas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="frame footer-inner">
+    <span class="footer-copy">&#169; 2026 Tarun B &#183; Data Engineer &#183; Dallas TX</span>
+    <span class="footer-copy">Open to opportunities</span>
+  </div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver((e)=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});},{threshold:0.08,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('[data-reveal]').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
