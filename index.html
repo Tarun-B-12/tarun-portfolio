@@ -720,7 +720,7 @@ footer {
     <div class="hero-actions" data-reveal>
       <a href="#projects" class="btn btn-primary">View portfolio &rarr;</a>
       <a href="https://github.com/Tarun-B-12" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
-      <a href="https://www.linkedin.com/in/tarun-b-data" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/tarun-kb-data" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
     </div>
   </div>
 
@@ -1038,7 +1038,7 @@ footer {
         <div class="exp-badge-row"><span class="exp-badge">Current</span></div>
         <div class="exp-co">Fifth Third Bank</div>
         <div class="exp-role">Data Engineer</div>
-        <div class="exp-date">Feb 2025 &ndash; Present &middot; Columbus OH</div>
+        <div class="exp-date">Feb 2025 &ndash; Present &middot; Charlotte NC</div>
       </div>
       <div class="exp-right">
         <ul class="exp-bullets">
@@ -1048,6 +1048,7 @@ footer {
           <li>Containerized ETL on <strong>AWS EKS + Terraform</strong> saving <strong>$180K annually</strong> at 99.95% uptime</li>
           <li>Data governance with column-level lineage and PII classification &mdash; <strong>2 audits with zero findings</strong></li>
           <li>Query optimization cutting runtime from <strong>4.5 min to 18 seconds</strong>, 34% compute credit reduction</li>
+          <li>Led a <strong>4-person engineering squad</strong> as technical lead, setting star schema and SCD Type 2 modeling standards and mentoring two engineers to independent pipeline ownership</li>
         </ul>
       </div>
     </div>
@@ -1060,10 +1061,9 @@ footer {
       </div>
       <div class="exp-right">
         <ul class="exp-bullets">
-          <li>Migrated <strong>40+ SSIS pipelines to Azure Data Factory</strong>, cutting batch time 62% for <strong>6M+ employee records</strong></li>
-          <li>Snowflake dimensional warehouse with SCD Type 2 enabling cross-domain analytics unavailable in prior siloed architecture</li>
-          <li><strong>400+ Great Expectations rules</strong> intercepting 1,200+ anomalies, preventing <strong>$500K in payroll correction costs</strong></li>
-          <li>Power BI semantic layer with 60+ DAX measures reducing BI ticket backlog <strong>60% in 6 weeks</strong></li>
+          <li>Built <strong>KafkaMailSync</strong>, a Python pipeline pulling Office 365 mail through the <strong>Microsoft Graph API</strong> and publishing Avro records to Kafka across three decoupled services: subscription manager, batch puller, and processor</li>
+          <li>Reduced redundant processing by implementing <strong>incremental batch retrieval</strong> with last-run state tracking, including <strong>PII redaction</strong> (e.g. SSNs) before publishing to Avro topics via the Confluent Kafka client</li>
+          <li>Shipped production-ready services by <strong>containerizing for Kubernetes</strong> with stage-level logging, performance metrics, and full test coverage across unit, integration, and performance tests</li>
         </ul>
       </div>
     </div>
@@ -1127,9 +1127,9 @@ footer {
         <span class="sg-title">Data Engineering</span>
       </div>
       <div class="sg-tags">
-        <span class="sgt">Apache Spark</span><span class="sgt">Kafka</span><span class="sgt">Airflow</span>
+        <span class="sgt">Apache Spark</span><span class="sgt">Kafka (Confluent)</span><span class="sgt">Airflow</span>
         <span class="sgt">dbt Core</span><span class="sgt">AWS Glue</span><span class="sgt">ADF</span>
-        <span class="sgt">Databricks</span><span class="sgt">Delta Lake</span><span class="sgt">Fivetran</span>
+        <span class="sgt">Databricks</span><span class="sgt">Delta Lake</span><span class="sgt">Fivetran</span><span class="sgt">Avro</span>
       </div>
     </div>
     <div class="sg">
@@ -1163,6 +1163,7 @@ footer {
       <div class="sg-tags">
         <span class="sgt">Docker</span><span class="sgt">Kubernetes</span><span class="sgt">Terraform</span>
         <span class="sgt">GitHub Actions</span><span class="sgt">CI/CD</span><span class="sgt">Linux</span>
+        <span class="sgt">Microsoft Graph API</span><span class="sgt">OAuth2</span>
       </div>
     </div>
     <div class="sg">
@@ -1203,8 +1204,8 @@ footer {
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/tarun-b-data" target="_blank" rel="noopener" class="cl">
-            <div><div class="cl-label">LinkedIn</div><div class="cl-val">linkedin.com/in/tarun-b-data</div></div>
+          <a href="https://www.linkedin.com/in/tarun-kb-data" target="_blank" rel="noopener" class="cl">
+            <div><div class="cl-label">LinkedIn</div><div class="cl-val">linkedin.com/in/tarun-kb-data</div></div>
             <span class="cl-arr">&rarr;</span>
           </a>
         </li>
