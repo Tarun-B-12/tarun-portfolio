@@ -16,7 +16,7 @@ A single-file, zero-dependency portfolio built with vanilla HTML, CSS, and JavaS
 |---|---|---|
 | Revenue Leakage and Margin Analysis | Python, DuckDB, SQL, Tableau, Streamlit | $566K leakage identified across 9,994 transactions |
 | Financial Document RAG Pipeline | AWS EC2, S3, Python, RAG, Vector DB | Live demo deployed on AWS |
-| LLM Transaction Classifier | Claude API, Python, eval framework | 91.2% accuracy vs rule-based baseline |
+| LLM Transaction Classifier | Claude API, Python, eval framework | 95.3% accuracy vs rule-based baseline |
 | Ecommerce KPI Mart | dbt Core, DuckDB, star schema | 100K+ rows modeled with full dbt tests and docs |
 | RetailStream Kafka Pipeline | Kafka, Confluent Cloud, Python, DuckDB, Streamlit | Full producer to live dashboard stack |
 | Retail Data Quality Observability | Great Expectations, Python, SQL | Pre-delivery validation and anomaly monitoring |
